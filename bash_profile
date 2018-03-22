@@ -4,14 +4,18 @@ export PS1="\[\033[0;32m\]\u@\h \W\[\033[0m\]$ "
 alias ls='ls -G'
 
 # git stuff
+alias ad='arc diff --nounit'
 alias com='git commit -a'
 alias amend='git commit -a --amend'
+
 alias gg='git grep'
-alias add='git add'
 alias gs='git ls-files | xargs gsed -i'
 alias gls='git ls-files'
 alias gns='git show --name-status'
-alias ad='arc diff --nounit'
+
+alias gb='git branch'
+alias gm='git checkout master'
+alias gc='git checkout'
 
 # uber
 goclone() {

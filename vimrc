@@ -17,7 +17,7 @@ set bg=dark
 set hlsearch
 set cursorline ruler
 
-set et ts=4 sw=4
+set et ts=2 sw=2
 set backspace=2
 set ignorecase
 au Syntax json setlocal ts=2 sw=2 foldmethod=indent foldlevel=1
@@ -30,6 +30,8 @@ set pastetoggle=<F2>
 nmap <F3> za
 nmap <F4> :Gg -w <cword> <CR>
 nmap <F5> :noh <CR>
+nmap <F6> :.w !bash <CR>
+vmap <F6> :w !bash <CR>
 
 let r_indent_align_args = 0
 let g:go_fmt_command = "goimports"
