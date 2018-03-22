@@ -7,16 +7,14 @@ alias ls='ls -G'
 alias ad='arc diff --nounit'
 alias com='git commit -a'
 alias amend='git commit -a --amend'
-alias gp='git push -f origin `git rev-parse --abbrev-ref HEAD`'
+alias push='git push -f origin `git rev-parse --abbrev-ref HEAD`'
 
 alias gg='git grep'
 alias gl='git log --format=fuller'
 alias gs='git ls-files | xargs gsed -i'
-alias gls='git ls-files'
 alias gns='git show --name-status'
 
-alias gb='git branch'
-alias gm='git checkout master'
+alias master='git checkout master'
 alias gc='git checkout'
 
 # uber
