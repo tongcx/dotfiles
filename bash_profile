@@ -8,19 +8,25 @@ alias ad='arc diff --nounit'
 alias com='git commit -a'
 alias amend='git commit -a --amend'
 alias push='git push -f origin `git rev-parse --abbrev-ref HEAD`'
+alias add='git add'
 
 alias gg='git grep'
 alias gl='git log --format=fuller'
 alias gs='git ls-files | xargs gsed -i'
 alias gns='git show --name-status'
 
-alias master='git checkout master'
-alias gc='git checkout'
+branch() {
+  if [ -z "$1" ]; then
+    git branch
+  else
+    git checkout $1
+  fi
+}
 
 # uber
 goclone() {
-    mkdir -p $GOPATH/src/code.uber.internal/$1
-    git clone gitolite@code.uber.internal:$1 $GOPATH/src/code.uber.internal/$1 --recursive
+  mkdir -p $GOPATH/src/code.uber.internal/$1
+  git clone gitolite@code.uber.internal:$1 $GOPATH/src/code.uber.internal/$1 --recursive
 }
 
 alias a='ssh adhoc07-sjc1'
