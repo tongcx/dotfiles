@@ -14,8 +14,9 @@ alias gg='git grep'
 alias gl='git log --format=fuller'
 alias gs='git ls-files | xargs gsed -i'
 alias gns='git show --name-status'
+alias s='git status'
 
-branch() {
+b() {
   if [ -z "$1" ]; then
     git branch
   else
