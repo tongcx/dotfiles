@@ -12,9 +12,10 @@ alias add='git add'
 
 alias gg='git grep'
 alias gl='git log --format=fuller'
-alias gs='git ls-files | xargs gsed -i'
+alias gs='git ls-files | grep -v go-build | xargs gsed -i'
 alias gns='git show --name-status'
 alias s='git status'
+alias kssh='pkill -f "ssh -NL"'
 
 b() {
   if [ -z "$1" ]; then
