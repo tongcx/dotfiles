@@ -8,7 +8,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'pangloss/vim-javascript'
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -33,6 +33,7 @@ nmap <F4> :Gg -w <cword> <CR>
 nmap <F5> :noh <CR>
 nmap <F6> :.w !bash <CR>
 vmap <F6> :w !bash <CR>
+map Q <Nop>
 
 let r_indent_align_args = 0
 let g:go_fmt_command = "goimports"

@@ -6,17 +6,23 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # git stuff
 alias ad='arc diff --nounit --nolint'
-alias com='git commit -a'
-alias amend='git commit -a --amend'
 alias push='git push -f origin `git rev-parse --abbrev-ref HEAD`'
 alias add='git add'
+alias com='add . && git commit'
+alias amend='add . && git commit --amend'
 
 alias gg='git grep'
 alias gl='git log --format=fuller'
 alias gs='git ls-files | grep -v go-build | xargs gsed -i'
 alias gns='git show --name-status'
-alias s='git status'
+alias rset='git reset --hard'
+alias s='git status .'
+alias d='git diff .'
 alias kssh='pkill -f "ssh -NL"'
+
+gr() {
+  grep -R "$1" .
+}
 
 b() {
   if [ -z "$1" ]; then
