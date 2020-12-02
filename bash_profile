@@ -5,7 +5,6 @@ export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # git stuff
-alias ad='arc diff --nounit --nolint'
 alias push='git push -f origin `git rev-parse --abbrev-ref HEAD`'
 alias add='git add'
 alias com='add . && git commit'
@@ -31,14 +30,6 @@ b() {
     git checkout $1
   fi
 }
-
-# uber
-goclone() {
-  mkdir -p $GOPATH/src/code.uber.internal/$1
-  git clone gitolite@code.uber.internal:$1 $GOPATH/src/code.uber.internal/$1 --recursive
-}
-
-tu() { ssh -NL $2:127.0.0.1:$2 $1; }
 
 # others
 source env/bin/activate 2> /dev/null
