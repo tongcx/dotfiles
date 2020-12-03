@@ -15,3 +15,4 @@ set foldmethod=indent foldlevel=20
 
 map Q <Nop>
 set pastetoggle=<F2>
+nnoremap gr :execute "vimgrep /\\<".expand("<cword>")."\\>/j **/* \| copen" <CR>
