@@ -3,6 +3,9 @@ export PS1="\[\033[0;32m\]\u@\h \W\[\033[0m\]$ "
 
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+export FZF_DEFAULT_COMMAND='rg --files'
+
+alias l='ls -lh'
 
 # git stuff
 alias push='git push -f origin `git rev-parse --abbrev-ref HEAD`'
@@ -18,6 +21,8 @@ alias rset='git reset --hard'
 alias s='git status .'
 alias d='git diff .'
 alias kssh='pkill -f "ssh -NL"'
+
+alias R='R --no-save --no-restore'
 
 gr() {
   grep -R "$1" .
